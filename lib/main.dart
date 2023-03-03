@@ -221,7 +221,7 @@ class _MyHomePageState extends State<MyHomePage> {
         // Method.1: with MethodChannel
         data = mockPicture(width, height);
         final res =
-            await textureRgbaRenderer.onRgba(key, data!, height, width);
+            await textureRgbaRenderer.onRgba(key, data!, height, width, 16);
         if (!res) {
           debugPrint("WARN: render failed");
         }
@@ -229,7 +229,7 @@ class _MyHomePageState extends State<MyHomePage> {
         final dataPtr = mockPicturePtr(width, height);
         // Method.2: with native ffi
         Native.instance.onRgba(Pointer.fromAddress(texturePtr).cast<Void>(),
-            dataPtr, width, height);
+            dataPtr, width * height * 4, width, height, 16);
         malloc.free(dataPtr);
       }
     });

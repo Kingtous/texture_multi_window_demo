@@ -36,7 +36,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   texture_rgba_renderer: 
-    path: ../texture_rgba_renderer
+    path: ../flutter_texture_rgba_renderer
   desktop_multi_window:
     path: ../rustdesk_desktop_multi_window
   url_launcher: any

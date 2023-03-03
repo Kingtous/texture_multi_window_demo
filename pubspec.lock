@@ -207,7 +207,7 @@ packages:
   texture_rgba_renderer:
     dependency: "direct main"
     description:
-      path: "../texture_rgba_renderer"
+      path: "../flutter_texture_rgba_renderer"
       relative: true
     source: path
     version: "0.0.11"
